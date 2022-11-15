@@ -78,7 +78,7 @@ Función de distribución acumulada
 
 Función cuantil de la distribución
 
-:   La funcion de distribucion cuantil $Q(x)$ es la inversa de la funcion de distribucion acumulada $F(x)$, esta especifica el valor de la variable aleatoria de manera que la
+:   La función de distribución cuantil $Q(x)$ es la inversa de la función de distribución acumulada $F(x)$, esta especifica el valor de la variable aleatoria de manera que la
     probabilidad de que la variable sea menor o igual a ese valor es igual a la probabilidad dada.
 
 ------------------------------------------------------------------------
