@@ -16,18 +16,36 @@ interquartile_range_odd <- function(value_vector){
   q1 <- (n+1)/4
   q3 <- (3*(n+1))/4
   
-  IQR <- value_vector[q3] - value_vector[q1]
+  if(n %% 2 == 0){
+    nearest_up <- ceiling(q1)
+    nearest_down <- floor(q1)
+    
+    nearest_up2 <- ceiling(q3)
+    nearest_down2 <- floor(q3)
+    
+    
+    q1 <- (value_vector[nearest_up] + value_vector[nearest_down])/2
+    print(q1)
+    q3 <- (value_vector[nearest_up2] + value_vector[nearest_down2])/2
+    print(q3)
+    IQR <- q3-q1
+  }
+  else{
+    IQR <- value_vector[q3] - value_vector[q1]
+  }
   
-  return(list(value_vector[q1], value_vector[q3], IQR))
+  return(IQR)
+  #return(list(value_vector[q1], value_vector[q3], IQR))
 }
 
 
 ```
 
 ```{r}
-interquartile_range_even <- function(value_vector){
-  return(0)
-}
+test <- c(16,16,17,21,28,31,39,39)
+vector_test <- c(4, 6, 6, 7, 8, 12, 15, 17, 20, 21, 21, 23, 24, 27,28)
+
+interquartile_range_odd(vector_test)
 ```
 
 ```{r}
