@@ -11,7 +11,7 @@ print(IQR(x))
 ```
 
 ```{r}
-interquartile_range <- function(value_vector){
+interquartile_range_odd <- function(value_vector){
   n <- length(value_vector)
   q1 <- (n+1)/4
   q3 <- (3*(n+1))/4
@@ -21,7 +21,23 @@ interquartile_range <- function(value_vector){
   return(list(value_vector[q1], value_vector[q3], IQR))
 }
 
-vector_test <- c(4, 6, 6, 7, 8, 12, 15, 17, 20, 21, 21, 23, 24, 27, 28)
 
-interquartile_range(vector_test)
+```
+
+```{r}
+interquartile_range_even <- function(value_vector){
+  return(0)
+}
+```
+
+```{r}
+
+vector_test <- c(4, 6, 6, 7, 8, 12, 15, 17, 20, 21, 21, 23, 24, 27)
+
+if (length(vector_test %% 2 == 0)){
+  interquartile_range_even()
+}else {
+ interquartile_range_odd(vector_test) 
+}
+
 ```
