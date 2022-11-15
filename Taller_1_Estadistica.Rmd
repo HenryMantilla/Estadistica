@@ -69,7 +69,7 @@ Funciones de densidad de probabilidad
 
     -   **Discretas:** son aquellas que se pueden tomar valores que están dentro de un conjunto finito(contable), por ejemplo , los resultados posibles para el lanzamiento de un dado. Estas se pueden representar con números enteros.
 
-    -   **Continuas:**
+    -   **Continuas:** son aquellas que toman cualquier valor dentro del intervalo de estudio. Estas se pueden representar con números reales.
 
 Función de distribución acumulada
 
