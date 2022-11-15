@@ -5,26 +5,18 @@ date: "2022-11-15"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+x <- c(4, 6, 6, 7, 8, 12, 15, 17, 20, 21, 21, 23, 24, 27, 28)
+print(IQR(x)) 
 ```
 
-## R Markdown
+```{r}
+{r}
+interquartile_range <- function(value_vector){
+  n <- length(vec)
+  q1 <- (n+1)/4
+  q2 <- (3*(n+1))/4
+}
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+interquartile_range(4, 6, 6, 7, 8, 12, 15, 17, 20, 21, 21, 23, 24, 27, 28)
 ```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
