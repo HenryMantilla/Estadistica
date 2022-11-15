@@ -64,7 +64,7 @@ print(IQR(x))
 
 Funciones de densidad de probabilidad
 
-:   La función de distribución de probabilidad es una función matemática que sirve y se emplea para definir cómo se distribuye una variable de tipo numérico en una población de interés para su estudio. Básicamente, describe la probabilidad relativa según la cual la variable aleatoria tomará un valor determinado.
+:   La función de distribución de probabilidad $f(x)$ es una función matemática que sirve y se emplea para definir cómo se distribuye una variable de tipo numérico en una población de interés para su estudio. Básicamente, describe la probabilidad relativa según la cual la variable aleatoria $X$ tomará un valor determinado.
 
     Esta funcion se puede dividir en dos grupos:
 
@@ -74,7 +74,7 @@ Funciones de densidad de probabilidad
 
 Función de distribución acumulada
 
-:   asdfghjklkjhgfdsa
+:   La función de distribución de probabilidad $F(x)$ es una función que sirve y se emplea para hallar la probabilidad de que la variable aleatoria $X$ sobre la que se está trabajando sea menor o igual de un valor determinado $x$.
 
 Función cuantil de la distribución
 
