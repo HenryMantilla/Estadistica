@@ -11,12 +11,17 @@ print(IQR(x))
 ```
 
 ```{r}
-{r}
 interquartile_range <- function(value_vector){
-  n <- length(vec)
+  n <- length(value_vector)
   q1 <- (n+1)/4
-  q2 <- (3*(n+1))/4
+  q3 <- (3*(n+1))/4
+  
+  IQR <- value_vector[q3] - value_vector[q1]
+  
+  return(list(value_vector[q1], value_vector[q3], IQR))
 }
 
-interquartile_range(4, 6, 6, 7, 8, 12, 15, 17, 20, 21, 21, 23, 24, 27, 28)
+vector_test <- c(4, 6, 6, 7, 8, 12, 15, 17, 20, 21, 21, 23, 24, 27, 28)
+
+interquartile_range(vector_test)
 ```
