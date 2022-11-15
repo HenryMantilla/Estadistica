@@ -5,7 +5,11 @@ date: "2022-11-15"
 output: html_document
 ---
 
--   **Vectores y Funciones en R**
+# Taller 1 Estadistica ll.
+
+------------------------------------------------------------------------
+
+## 1. Vectores y Funciones en R
 
 ```{r}
 interquartile_range <- function(value_vector){
@@ -53,4 +57,26 @@ x <- c(16,16,17,21,28,31,39,39)
 print(IQR(x))
 ```
 
--   **Distribuciones de Probabilidad en R**
+------------------------------------------------------------------------
+
+## **2. Distribuciones de probabilidad en R**
+
+Funciones de densidad de probabilidad
+
+:   La función de distribución de probabilidad es una función matemática que sirve y se emplea para definir cómo se distribuye una variable de tipo numérico en una población de interés para su estudio. Básicamente, describe la probabilidad relativa según la cual la variable aleatoria tomará un valor determinado.
+
+    Esta funcion se puede dividir en dos grupos:
+
+    -   **Discretas:** son aquellas que se pueden tomar valores que están dentro de un conjunto finito(contable), por ejemplo , los resultados posibles para el lanzamiento de un dado. Estas se pueden representar con números enteros.
+
+    -   **Continuas:**
+
+Función de distribución acumulada
+
+:   asdfghjklkjhgfdsa
+
+Función cuantil de la distribución
+
+:   asdfghjklkjhgfdsa
+
+------------------------------------------------------------------------
