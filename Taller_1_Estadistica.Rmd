@@ -49,6 +49,7 @@ interquartile_range(vector_test)
 
 ```{r}
 x <- c(16,16,17,21,28,31,39,39)
+#La funcion SUMMARY retorna algunas caracteristicas del conjunto de datos del vector, el valor de los cuartiles son diferentes a los que calculamos manualmente, por que? no sé.
 summary(x)
 ```
 
