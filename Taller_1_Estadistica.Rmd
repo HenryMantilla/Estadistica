@@ -5,18 +5,16 @@ date: "2022-11-15"
 output: html_document
 ---
 
-```{r}
-x <- c(16,16,17,21,28,31,39,39)
-print(IQR(x))
-```
+-   **Vectores y Funciones en R**
 
 ```{r}
 interquartile_range <- function(value_vector){
   vctor <- length(value_vector)
   n <- sort(vctor)
-  print(n.values)
+  
   q1 <- (n+1)/4
   q3 <- (3*(n+1))/4
+  
   if(n %% 2 == 0){
     nearest_up <- ceiling(q1)
     nearest_down <- floor(q1)
@@ -48,9 +46,11 @@ interquartile_range(vector_test)
 ```{r}
 x <- c(16,16,17,21,28,31,39,39)
 summary(x)
-mean(x)
 ```
 
 ```{r}
-c(39,16,17,21,28,31,39,16)
+x <- c(16,16,17,21,28,31,39,39)
+print(IQR(x))
 ```
+
+-   **Distribuciones de Probabilidad en R**
