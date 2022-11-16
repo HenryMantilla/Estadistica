@@ -7,7 +7,7 @@ output: html_document
 ## **1. Vectores y Funciones en R.**
 
 ```{r}
-interquartile_rage <- function(value_vector){
+interquartile_range <- function(value_vector){
   vctor <- length(value_vector)
   n <- sort(vctor)
   
