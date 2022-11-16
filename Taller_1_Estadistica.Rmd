@@ -31,7 +31,7 @@ interquartile_range <- function(value_vector){
   else{
     IQR <- value_vector[q3] - value_vector[q1]
   }
-  return(IQR)
+  return(list(IQR,q1,q3))
 }
 
 
@@ -44,14 +44,19 @@ interquartile_range(vector_test)
 ```
 
 ```{r}
-x <- c(16,16,17,21,28,31,39,39)
+vec <- c(16,16,17,21,28,31,39,39)
 #La funcion SUMMARY retorna algunas caracteristicas del conjunto de datos del vector, el valor de los cuartiles son diferentes a los que calculamos manualmente, por que? no sé.
-summary(x)
+summary(vec)
 ```
 
 ```{r}
-x <- c(16,16,17,21,28,31,39,39)
-print(IQR(x))
+print(IQR(vec))
+```
+
+```{r}
+sapply(1:9, function(x) quantile(vec, probs = 0.75, type = x))
+
+# 0.75 = 3 cuartil   0.25 = 1 cuartil
 ```
 
 ------------------------------------------------------------------------
