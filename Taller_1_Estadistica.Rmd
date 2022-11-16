@@ -1,15 +1,11 @@
 ---
-title: "Taller_1_Estadistica-ll"
+title: "Taller 1 Estadistica ll"
 author: "Henry Mantilla, Santiago Mendez"
 date: "2022-11-15"
 output: html_document
 ---
 
-# Taller 1 Estadistica ll.
-
-------------------------------------------------------------------------
-
-## 1. Vectores y Funciones en R
+## **1. Vectores y Funciones en R**
 
 ```{r}
 interquartile_range <- function(value_vector){
@@ -78,7 +74,6 @@ Función de distribución acumulada
 
 Función cuantil de la distribución
 
-:   La función de distribución cuantil $Q(x)$ es la inversa de la función de distribución acumulada $F(x)$, esta especifica el valor de la variable aleatoria de manera que la
-    probabilidad de que la variable sea menor o igual a ese valor es igual a la probabilidad dada.
+:   La función de distribución cuantil $Q(x)$ es la inversa de la función de distribución acumulada $F(x)$, esta especifica el valor de la variable aleatoria de manera que la probabilidad de que la variable sea menor o igual a ese valor es igual a la probabilidad dada.
 
 ------------------------------------------------------------------------
