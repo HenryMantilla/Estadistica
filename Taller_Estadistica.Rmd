@@ -110,4 +110,20 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
 
 -   **Distribucion Exponencial**
 
-    -   
+    Sea $X =$ el tiempo entre dos llegadas sucesivas a la ventanilla de autopago de un banco local. Si X tiene una distribución exponencial con $\lambda = 1$ (la cual es idéntica a una distribución gama estándar con $\alpha = 1$), calcule lo siguiente:
+
+    -   $P(X \leq 4)$
+
+    ```{r}
+    pexp(4,1)
+    ```
+
+    -   $P(2 \leq X \leq 5)$
+
+    ```{r}
+    pexp(5,1) - pexp(2,1)
+    ```
+
+    ```{r}
+
+    ```
