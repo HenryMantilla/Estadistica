@@ -88,8 +88,22 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
 
 -   **Distribucion Binomial Discreta**
 
-    -   Henry tiene una efectividad de aciertos en sus tiros libres de basquetball del 60%. Si Henry lanza 12 tiros libres, cual es la probabilidad de que de esos 12 tiros libres, anote exactamente 10?
+    -   Una compañía que produce cristales finos sabe por experiencia que 10% de sus copas de mesa tienen imperfecciones cosméticas y deben ser clasificadas como "de segunda". Entre seis copas seleccionadas al azar, ¿qué tan probable es que sólo una sea de segunda?
+
+        Referencia: Devore, J. L. (2016). *PROBABILIDAD Y ESTADISTICA PARA INGENIERIA Y CIENCIAS*. CENGAGE LEARNING.
+
+    a) Para conocer la probabilidad de que sólo una de las seis copas elegidas al azar sea de segunda, usamos la función de densidad de probabilidad de la respectiva distribución, la cual esta definida en el lenguaje R como **dbinom.**
 
     ```{r}
-    dbinom (10,12,0.6)
+    dbinom (1,6,0.1)
     ```
+
+    b) Entre seis copas seleccionadas al azar, ¿qué tan probable es que por lo menos dos sean de segunda?
+
+    ```{r}
+    pbinom(1,6,0.1 ,lower.tail = FALSE)
+    ```
+
+-   **Distribucion Exponencial**
+
+    -   
