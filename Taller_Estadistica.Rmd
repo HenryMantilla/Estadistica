@@ -124,6 +124,21 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
     pexp(5,1) - pexp(2,1)
     ```
 
-    ```{r}
+```{r}
+u=seq(0,3.09,by=0.01)
+p=pnorm(u)
+m=matrix(p,ncol=10,byrow=TRUE)
+```
 
-    ```
+```{r}
+options(digits = 4)
+rownames(m)=seq(0,3,b=.1)
+colnames(m)=seq(0,.09,by=.01)
+m
+```
+
+```{r}
+dataframe_data=as.data.frame(m)
+  
+print(dataframe_data)
+```
