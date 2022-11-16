@@ -8,7 +8,7 @@ output: html_document
 ## **1. Vectores y Funciones en R**
 
 ```{r}
-interquartile_range <- function(value_vector){
+interquartile_rage <- function(value_vector){
   vctor <- length(value_vector)
   n <- sort(vctor)
   
@@ -31,7 +31,7 @@ interquartile_range <- function(value_vector){
   else{
     IQR <- value_vector[q3] - value_vector[q1]
   }
-  return(list(IQR,q1,q3))
+  return(list(q1,q3,IQR))
 }
 
 
@@ -81,4 +81,39 @@ Función cuantil de la distribución
 
 :   La función de distribución cuantil $Q(x)$ es la inversa de la función de distribución acumulada $F(x)$, esta especifica el valor de la variable aleatoria de manera que la probabilidad de que la variable sea menor o igual a ese valor es igual a la probabilidad dada.
 
-------------------------------------------------------------------------
+En R, las instrucciones que existen para poder obtener valores asociados a la funciones anteriormente descritas son están compuestas por unas letras para cada función seguido del nombre de la distribución de interés, por ejemplo: **"binom"** para la distribución binomial, **"norm"** para la distribución normal, etc.
+
+-   Función de densidad de probabilidad (d): la instrucción comienza con la letra **"d",** seguida del nombre de la distribución asociada.
+
+-   Función de distribución acumulada (p): la instrucción comienza con la letra **"p",** seguida del nombre de la distribución asociada.
+
+-   Función cuantil de distribución (q): la instrucción comienza con la letra **"q",** seguida del nombre de la distribución asociada.
+
+**Ejemplos:**
+
+-   **Distribucion Binomial Discreta**
+
+    -   Henry tiene una efectividad de aciertos en sus tiros libres de basquetball del 60%. Si Henry lanza 12 tiros libres, cual es la probabilidad de que de esos 12 tiros libres, anote exactamente 10?
+
+        ```{r}
+
+        dbinom (x = 10, size = 12, prob = 0.6)
+        ```
+
+    -   Cual es la probabilidad que anote 12 tiros libres o menos?
+
+        ```{r}
+
+        ```
+
+-   **Distribucion Exponencial Cotinua**
+
+    -   sadsadsa
+
+    ```{r}
+
+    ```
+
+```{r}
+dbinom (x = 10, size = 12, prob = 0.6)
+```
