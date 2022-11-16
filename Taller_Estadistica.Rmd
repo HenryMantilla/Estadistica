@@ -1,7 +1,6 @@
 ---
-title: "Taller 1 Estadistica ll"
+title: "Taller_Estadistica"
 author: "Henry Mantilla, Santiago Mendez"
-date: "2022-11-15"
 output: html_document
 ---
 
@@ -33,8 +32,6 @@ interquartile_rage <- function(value_vector){
   }
   return(list(q1,q3,IQR))
 }
-
-
 ```
 
 ```{r}
@@ -58,8 +55,6 @@ sapply(1:9, function(x) quantile(vec, probs = 0.75, type = x))
 
 # 0.75 = 3 cuartil   0.25 = 1 cuartil
 ```
-
-------------------------------------------------------------------------
 
 ## **2. Distribuciones de probabilidad en R**
 
@@ -95,25 +90,6 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
 
     -   Henry tiene una efectividad de aciertos en sus tiros libres de basquetball del 60%. Si Henry lanza 12 tiros libres, cual es la probabilidad de que de esos 12 tiros libres, anote exactamente 10?
 
-        ```{r}
-
-        dbinom (x = 10, size = 12, prob = 0.6)
-        ```
-
-    -   Cual es la probabilidad que anote 12 tiros libres o menos?
-
-        ```{r}
-
-        ```
-
--   **Distribucion Exponencial Cotinua**
-
-    -   sadsadsa
-
     ```{r}
-
+    dbinom (10,12,0.6)
     ```
-
-```{r}
-dbinom (x = 10, size = 12, prob = 0.6)
-```
