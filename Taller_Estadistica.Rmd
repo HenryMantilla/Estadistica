@@ -4,7 +4,7 @@ author: "Henry Mantilla, Santiago Mendez"
 output: html_document
 ---
 
-## **1. Vectores y Funciones en R**
+## **1. Vectores y Funciones en R.**
 
 ```{r}
 interquartile_rage <- function(value_vector){
@@ -56,7 +56,7 @@ sapply(1:9, function(x) quantile(vec, probs = 0.75, type = x))
 # 0.75 = 3 cuartil   0.25 = 1 cuartil
 ```
 
-## **2. Distribuciones de probabilidad en R**
+## **2. Distribuciones de probabilidad en R.**
 
 Funciones de densidad de probabilidad
 
@@ -124,21 +124,41 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
     pexp(5,1) - pexp(2,1)
     ```
 
-```{r}
-u=seq(0,3.09,by=0.01)
-p=pnorm(u)
-m=matrix(p,ncol=10,byrow=TRUE)
-```
+## **3. Generación de tablas distribución probabilidad.**
 
-```{r}
-options(digits = 4)
-rownames(m)=seq(0,3,b=.1)
-colnames(m)=seq(0,.09,by=.01)
-m
-```
+-   **Distribución Normal**
 
-```{r}
-dataframe_data=as.data.frame(m)
-  
-print(dataframe_data)
-```
+    ```{r}
+    u <- seq(0,3.09,by=0.01)
+    m <- matrix(pnorm(u),ncol=10,byrow=TRUE)
+    rownames(m) <- seq(0,3,b=.1)
+    colnames(m) <- seq(0,.09,by=.01)
+    dataframe_data <- as.data.frame(m)
+    print(dataframe_data)
+    ```
+
+-   **Distribución T - student**
+
+    ```{r}
+    p <- c(.25, .20 ,.15 ,.10 ,.05, .025 ,.02 ,.01 ,.005, .0025 ,.001 ,.0005)
+    df <- seq(1,30)
+    m <- outer(p, df, function(x,y) qt(x,y,lower.tail = FALSE))
+    m <- t(m)
+    colnames(m) <- p
+    rownames(m) <- df
+    dataframe_data=as.data.frame(m)
+    print(dataframe_data)
+    ```
+
+-   **Distribución Chi - cuadrado**
+
+    ```{r}
+    p <- c(.25, .20 ,.15 ,.10 ,.05, .025 ,.02 ,.01 ,.005, .0025 ,.001 ,.0005)
+    df <- seq(1,30)
+    m <- outer(p, df, function(x,y) qchisq(x,y,lower.tail = FALSE))
+    m <- t(m)
+    colnames(m) <- p
+    rownames(m) <- df
+    dataframe_data=as.data.frame(m)
+    print(dataframe_data)
+    ```
