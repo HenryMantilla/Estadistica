@@ -180,6 +180,11 @@ mean(d)
 
 ```{r}
 n <- 10000
-muestra <- rep(sample(d,size = 50, replace = TRUE), times = 10000)
-muestra
+#muestra <- rep(sample(d,size = 50, replace = TRUE), times = 10000)
+#muestra
+lista <- list()
+for (j in 1:10000){
+  lista[[j]] <- mean(sample(d,size = 50, replace = TRUE))
+}
+lista
 ```
