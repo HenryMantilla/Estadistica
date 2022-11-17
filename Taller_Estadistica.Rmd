@@ -90,8 +90,6 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
 
     Una compañía que produce cristales finos sabe por experiencia que 10% de sus copas de mesa tienen imperfecciones cosméticas y deben ser clasificadas como "de segunda".
 
-    Referencia: Devore, J. L. (2016). *PROBABILIDAD Y ESTADISTICA PARA INGENIERIA Y CIENCIAS*. CENGAGE LEARNING.
-
     -   Entre seis copas seleccionadas al azar, ¿qué tan probable es que sólo una sea de segunda?
 
         Para conocer la probabilidad de que sólo una de las seis copas elegidas al azar sea de segunda, usamos la función de densidad de probabilidad de la respectiva distribución, la cual esta definida en el lenguaje R como **dbinom.**
@@ -102,11 +100,13 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
 
     -   Entre seis copas seleccionadas al azar, ¿qué tan probable es que por lo menos dos sean de segunda?
 
-        Para conocer la probabilidad de que al menos dos copas sean de segunda entre seis copas, usamos la funcion de distribucion acumulada de la respectiac distribucion, la cual esta definida en el lenguaje R como **pbinom.**
+        Para conocer la probabilidad de que al menos dos copas sean de segunda entre seis copas, usamos la funcion de distribucion acumulada de la respectiac distribución, la cual esta definida en el lenguaje R como **pbinom.**
 
     ```{r}
     pbinom(1,6,0.1 ,lower.tail = FALSE)
     ```
+
+    -   Referencia: Devore, J. L. (2016). *PROBABILIDAD Y ESTADISTICA PARA INGENIERIA Y CIENCIAS*. CENGAGE LEARNING.
 
 -   **Distribucion Exponencial**
 
@@ -123,6 +123,8 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
     ```{r}
     pexp(5,1) - pexp(2,1)
     ```
+
+-   Referencia: Devore, J. L. (2016). *PROBABILIDAD Y ESTADISTICA PARA INGENIERIA Y CIENCIAS*. CENGAGE LEARNING.
 
 ## **3. Generación de tablas distribución probabilidad.**
 
@@ -172,18 +174,46 @@ dataset
 
 ```{r}
 d <- dataset$Diameter
-```
-
-```{r}
 mean(d)
 ```
 
+## **(a)**
+
 ```{r}
-#muestra <- rep(sample(d,size = 50, replace = TRUE), times = 10000)
-#muestra
 lista <- list()
 for (j in 1:10000){
-  lista[[j]] <- mean(sample(d,size = 50, replace = TRUE))
+  lista[j] <- mean(sample(d,size = 50, replace = TRUE))
 }
-lista
+
+vector_medias_muestrales <- unlist(lista)
+hist(vector_medias_muestrales, main = "", xlab = "Medias muestrales", prob = T, col = "forestgreen", xlim=c(0.34,0.46),ylim=c(0,30))
+lines(density(vector_medias_muestrales), col = "darkred", lwd = 1.5)
+```
+
+Al tomar 10000 muestras, cada una de tamaño 50 y posterioremente calculando la media muestral de cada una de estas se observa como la distribución teórica de la medias muestrales sigue una distribución normal, tal como indica el teorema del límite central para las medias muestrales, además mientras mayor sea el tamaño de la muestra, la distribución de las medias muestrales se ajustara más a la distribución normal.
+
+## **(b)**
+
+```{r}
+lista2 <- list()
+for (j in 1:10000){
+  lista2[j] <- mean(sample(d,size = 15, replace = TRUE))
+}
+
+vector_medias_muestrales2 <- unlist(lista2)
+hist(vector_medias_muestrales2, main = "", xlab = "Medias muestrales", prob = T, col = "darkorange1", xlim=c(0.25,0.55),ylim=c(0,20))
+lines(density(vector_medias_muestrales2), col = "darkgreen", lwd = 1.5)
+```
+
+## **(c)**
+
+```{r}
+lista3 <- list()
+for (j in 1:10000){
+  lista3[j] <- mean(sample(d,size = 4, replace = TRUE))
+}
+
+vector_medias_muestrales3 <- unlist(lista3)
+hist(vector_medias_muestrales3, main = "", xlab = "Medias muestrales", prob = T, col = "firebrick2", xlim=c(0.20,0.60),ylim=c(0,10))
+lines(density(vector_medias_muestrales3), col = "dodgerblue3", lwd = 1.5)
 ```
