@@ -1,6 +1,6 @@
 ---
 title: "Taller_Estadistica"
-author: "Henry Mantilla, Santiago Mendez"
+author: "Henry Mantilla - 2190071, Santiago Mendez - 2172020"
 output: html_document
 ---
 
