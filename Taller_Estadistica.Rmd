@@ -180,6 +180,6 @@ mean(d)
 
 ```{r}
 n <- 10000
-muestra <- d[sample(1:,size = 50, replace = TRUE)]
+muestra <- rep(sample(d,size = 50, replace = TRUE), times = 10000)
 muestra
 ```
