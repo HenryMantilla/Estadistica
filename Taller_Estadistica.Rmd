@@ -205,6 +205,10 @@ hist(vector_medias_muestrales2, main = "", xlab = "Medias muestrales", prob = T,
 lines(density(vector_medias_muestrales2), col = "darkgreen", lwd = 1.5)
 ```
 
+En este inciso (b) se redujo el tamaño de la muestra drásticamente a 15 observaciones por muestra. Para tamaños de muestras pequeños ($n \leq 30$) la distribución descrita por los datos tiende a ser la distribución t de student.
+
+También cabe resaltar que en el inicio del punto 4), se nos pide asumir que se desconoce el valor de la varianza poblacional, con dicho valor se podría calcular la desviación estándar poblacional. Por lo anterior resulta aún más lógico comparar la distribucion de las medias muestrales para muestras de tamaño $n = 15$ con la distribución t de student, pues se cumplen estos dos factores importantes, un tamaño pequeño de muestra y la asunción del no conocimiento de la desviación estándar poblacional.
+
 ## **(c)**
 
 ```{r}
@@ -217,3 +221,5 @@ vector_medias_muestrales3 <- unlist(lista3)
 hist(vector_medias_muestrales3, main = "", xlab = "Medias muestrales", prob = T, col = "firebrick2", xlim=c(0.20,0.60),ylim=c(0,10))
 lines(density(vector_medias_muestrales3), col = "dodgerblue3", lwd = 1.5)
 ```
+
+Con estos ejercicios se observo como el tamaño de la muestra afecta la distribución teórica de las medias muestrales. La distribución teoricas de las medias muestrales para el caso de 10000 muestras con tamaño de 50 registros por muestra, se ajusto muy bien a la distribución normal, sin embargo, cuando se realizo el mismo proceso para un tamaño de muestra compuesto por 15 registros, sus medias muestrales ya no se ajustaba tan bien a la distribución normal, sino que se ajustaban más a la distribución t de student debido al pequeño tamaño de la muestra.
