@@ -162,3 +162,24 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
     dataframe_data=as.data.frame(m)
     print(dataframe_data)
     ```
+
+## **4. Investigación de distribuciones muestrales con el lenguaje de programación R.**
+
+```{r}
+dataset <- read.csv(file = 'abalone.csv', header = TRUE)
+dataset
+```
+
+```{r}
+d <- dataset$Diameter
+```
+
+```{r}
+mean(d)
+```
+
+```{r}
+n <- 10000
+muestra <- d[sample(1:,size = 50, replace = TRUE)]
+muestra
+```
