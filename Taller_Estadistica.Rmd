@@ -42,12 +42,8 @@ interquartile_range(vector_test)
 
 ```{r}
 vec <- c(16,16,17,21,28,31,39,39)
-#La funcion SUMMARY retorna algunas caracteristicas del conjunto de datos del vector, el valor de los cuartiles son diferentes a los que calculamos manualmente, por que? no sé.
+#La funcion SUMMARY retorna algunas caracteristicas del conjunto de datos del vector
 summary(vec)
-```
-
-```{r}
-print(IQR(vec))
 ```
 
 ```{r}
@@ -169,7 +165,7 @@ En R, las instrucciones que existen para poder obtener valores asociados a la fu
 
 ```{r}
 dataset <- read.csv(file = 'abalone.csv', header = TRUE)
-dataset
+head(dataset)
 ```
 
 ```{r}
@@ -177,7 +173,7 @@ d <- dataset$Diameter
 mean(d)
 ```
 
-## **(a)**
+-   **10000 muestras de tamaño n=50.**
 
 ```{r}
 lista <- list()
@@ -192,7 +188,7 @@ lines(density(vector_medias_muestrales), col = "darkred", lwd = 1.5)
 
 Al tomar 10000 muestras, cada una de tamaño 50 y posterioremente calculando la media muestral de cada una de estas se observa como la distribución teórica de la medias muestrales sigue una distribución normal, tal como indica el teorema del límite central para las medias muestrales, además mientras mayor sea el tamaño de la muestra, la distribución de las medias muestrales se ajustara más a la distribución normal.
 
-## **(b)**
+-   **10000 muestras de tamaño n=15.**
 
 ```{r}
 lista2 <- list()
@@ -205,11 +201,11 @@ hist(vector_medias_muestrales2, main = "", xlab = "Medias muestrales", prob = T,
 lines(density(vector_medias_muestrales2), col = "darkgreen", lwd = 1.5)
 ```
 
-En este inciso (b) se redujo el tamaño de la muestra drásticamente a 15 observaciones por muestra. Para tamaños de muestras pequeños ($n \leq 30$) la distribución descrita por los datos tiende a ser la distribución t de student.
+En este segundo inciso (b) se redujo el tamaño de la muestra drásticamente a 15 observaciones por muestra. Para tamaños de muestras pequeños ($n \leq 30$) la distribución descrita por los datos tiende a ser la distribución t de student.
 
 También cabe resaltar que en el inicio del punto 4), se nos pide asumir que se desconoce el valor de la varianza poblacional, con dicho valor se podría calcular la desviación estándar poblacional. Por lo anterior resulta aún más lógico comparar la distribucion de las medias muestrales para muestras de tamaño $n = 15$ con la distribución t de student, pues se cumplen estos dos factores importantes, un tamaño pequeño de muestra y la asunción del no conocimiento de la desviación estándar poblacional.
 
-## **(c)**
+-   **10000 muestras de tamaño n=4.**
 
 ```{r}
 lista3 <- list()
