@@ -179,7 +179,6 @@ mean(d)
 ```
 
 ```{r}
-n <- 10000
 #muestra <- rep(sample(d,size = 50, replace = TRUE), times = 10000)
 #muestra
 lista <- list()
